@@ -1,0 +1,35 @@
+# Android build outputs
+*.apk
+*.aab
+*.ap_
+*.dex
+
+# Build directories
+build/
+app/build/
+
+# Gradle
+.gradle/
+gradle-wrapper.jar
+local.properties
+
+# Signing — never commit keystores or passwords
+*.jks
+*.keystore
+*.p12
+keystore.properties
+
+# Android Studio / IntelliJ IDEA
+*.iml
+.idea/
+*.iws
+*.ipr
+captures/
+.navigation/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Kotlin
+*.class

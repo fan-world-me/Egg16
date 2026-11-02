@@ -1,0 +1,46 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+}
+
+android {
+    compileSdk 34
+    namespace 'com.example.egglauncher'
+
+    signingConfigs {
+        release {
+            storeFile file("C:/Users/yarik/Desktop/halolight/fan_world_me.jks")
+            storePassword "fan_world_me"
+            keyAlias "fan_world_me"
+            keyPassword "fan_world_me"
+        }
+    }
+
+    defaultConfig {
+        applicationId "com.example.egglauncher"
+        minSdk 21
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            signingConfig signingConfigs.release
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+    implementation 'org.jetbrains.kotlin:kotlin-stdlib:2.0.0'
+}
